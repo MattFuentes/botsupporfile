@@ -1,0 +1,110 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.13/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.13",
+  "id": "8a3f02be-d701-43ea-9196-c639745bc088",
+  "version": "{{VERSION}}",
+  "packageName": "{{PACKAGE_NAME}}",
+  "developer": {
+    "name": "Matias Fuentes",
+    "websiteUrl": "https://{{PUBLIC_HOSTNAME}}",
+    "privacyUrl": "https://{{PUBLIC_HOSTNAME}}/privacy.html",
+    "termsOfUseUrl": "https://{{PUBLIC_HOSTNAME}}/tou.html"
+  },
+  "name": {
+    "short": "qa-matt",
+    "full": "qa-matt"
+  },
+  "description": {
+    "short": "TODO: add short description here",
+    "full": "TODO: add full description here"
+  },
+  "icons": {
+    "outline": "icon-outline.png",
+    "color": "icon-color.png"
+  },
+  "accentColor": "#D85028",
+  "configurableTabs": [],
+  "staticTabs": [
+    {
+      "entityId": "dfb19f13-25f6-48a6-9a21-44c8b2df695b",
+      "name": "qa-matt Tab",
+      "contentUrl": "https://{{PUBLIC_HOSTNAME}}/qaMattTab/?name={loginHint}&tenant={tid}&theme={theme}",
+      "scopes": [
+        "personal"
+      ]
+    },
+    {
+      "entityId": "0c56ee20-9b86-11ed-b227-4d78fe045f9e",
+      "name": "About qa-matt",
+      "contentUrl": "https://{{PUBLIC_HOSTNAME}}/qaMattMessageExtensionBot/aboutQaMatt.html",
+      "scopes": [
+        "personal"
+      ]
+    }
+  ],
+  "bots": [
+    {
+      "botId": "8a3f02be-d701-43ea-9196-c639745bc088",
+      "needsChannelSelector": true,
+      "isNotificationOnly": false,
+      "scopes": [
+        "team",
+        "personal",
+        "groupchat"
+      ],
+      "commandLists": [
+        {
+          "scopes": [
+            "team",
+            "personal"
+          ],
+          "commands": [
+            {
+              "title": "Ayuda",
+              "description": "Muestra la opcion ayuda"
+            },
+            {
+              "title": "IVR",
+              "description": "Ejemplo IVR"
+            },
+            {
+              "title": "Mentiona me",
+              "description": "Realiza una mencion"
+            }
+          ]
+        }
+      ],
+      "supportsFiles": true
+    }
+  ],
+  "connectors": [],
+  "composeExtensions": [
+    {
+      "botId": "8a3f02be-d701-43ea-9196-c639745bc088",
+      "canUpdateConfiguration": true,
+      "commands": [
+        {
+          "id": "qaMattMessageExtension",
+          "title": "qa-matt Message Extension",
+          "description": "QA-Matt",
+          "initialRun": true,
+          "type": "action",
+          "context": [
+            "compose",
+            "commandBox",
+            "message"
+          ],
+          "fetchTask": true
+        }
+      ]
+    }
+  ],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [
+    "9665-2803-9800-9097-82cf-8176-8aef-851c-d238.ngrok.io"
+  ],
+  "showLoadingIndicator": false
+}

@@ -1,0 +1,101 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.4",
+  "body": [
+      {
+          "type": "ColumnSet",
+          "columns": [
+              {
+                  "type": "Column",
+                  "width": "auto",
+                  "items": [
+                      {
+                          "type": "Image",
+                          "url": "https://v5j9q4b5.rocketcdn.me/wp-content/uploads/2020/09/bots-o-que-sao-como-funcionam-quais-seus-beneficios-e-maleficios-1024x505.png",
+                          "size": "Medium"
+                      }
+                  ],
+                  "verticalContentAlignment": "Center",
+                  "spacing": "Large"
+              },
+              {
+                  "type": "Column",
+                  "width": "stretch",
+                  "items": [
+                      {
+                          "type": "TextBlock",
+                          "spacing": "Medium",
+                          "size": "Large",
+                          "weight": "Bolder",
+                          "text": "Bienvenido a QA-Matt",
+                          "wrap": true,
+                          "maxLines": 0
+                      },
+                      {
+                          "type": "TextBlock",
+                          "size": "default",
+                          "text": "Hola! Esta es una aplicación prueba de QA-Matt 😀",
+                          "wrap": true,
+                          "maxLines": 0
+                      }
+                  ]
+              }
+          ]
+      },
+      {
+          "type": "ActionSet",
+          "actions": [
+              {
+                  "type": "Action.OpenUrl",
+                  "title": "Ejemplo 1",
+                  "url": "https://newtech.com.ar/"
+              },
+              {
+                  "type": "Action.OpenUrl",
+                  "title": "Ejemplo 2 - Chat GPT",
+                  "url": "https://newtech.com.ar/aplicaciones-personalizadas/"
+              }
+          ],
+          "height": "stretch"
+      },
+      {
+          "type": "ActionSet",
+          "actions": [
+              {
+                  "type": "Action.Submit",
+                  "title": "Quien soy?",
+                  "data": {
+                    "msteams": {
+                      "type": "messageBack",
+                      "displayText": "who am i?",
+                      "text": "who"
+                    }
+                  }
+              },
+              {
+                "type": "Action.Submit",
+                "title": "Mencioname",
+                "data": {
+                  "msteams": {
+                    "type": "messageBack",
+                    "displayText": "mention me",
+                    "text": "mention"
+                  }
+                }
+              },
+              {
+                "type": "Action.Submit",
+                "title": "Obtener Ayuda",
+                "data": {
+                  "msteams": {
+                    "type": "messageBack",
+                    "displayText": "get help",
+                    "text": "help"
+                  }
+                }
+              }
+          ]
+      }
+  ]
+}
